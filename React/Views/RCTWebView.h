@@ -23,5 +23,6 @@
 - (void)goForward;
 - (void)goBack;
 - (void)reload;
+- (void)loadHTMLString:(NSString *)HTML;
 
 @end

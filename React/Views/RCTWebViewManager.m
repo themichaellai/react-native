@@ -25,6 +25,10 @@ RCT_REMAP_VIEW_PROPERTY(url, URL, NSURL);
 RCT_EXPORT_VIEW_PROPERTY(contentInset, UIEdgeInsets);
 RCT_EXPORT_VIEW_PROPERTY(automaticallyAdjustContentInsets, UIEdgeInsets);
 RCT_EXPORT_VIEW_PROPERTY(shouldInjectAJAXHandler, BOOL);
+RCT_CUSTOM_VIEW_PROPERTY(htmlString, NSString, RCTWebView)
+{
+  [view loadHTMLString:[RCTConvert NSString:json]];
+}
 
 - (NSDictionary *)constantsToExport
 {

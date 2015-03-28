@@ -56,6 +56,11 @@
   [_webView reload];
 }
 
+- (void)loadHTMLString:(NSString*)HTML
+{
+  [_webView loadHTMLString:HTML baseURL:nil];
+}
+
 - (void)setURL:(NSURL *)URL
 {
   // Because of the way React works, as pages redirect, we actually end up
